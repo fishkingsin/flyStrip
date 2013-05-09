@@ -57,7 +57,8 @@ void testApp::update(){
         vec[j]*=0.9;
         if(pos[j].y<-200)
         {
-//            pos[j].y = ofGetHeight();
+            age[j] = 1;
+            pos[j].y = ofGetHeight();
             for (int i=0; i<LOC_LENGTH; i++)
             {
                 int index = i+(j*LOC_LENGTH);
@@ -66,8 +67,8 @@ void testApp::update(){
         }
         else if(pos[j].x<-200)
         {
-            
-//            pos[j].x = ofGetWidth();
+                        age[j] = 1;
+            pos[j].x = ofGetWidth();
             for (int i=0; i<LOC_LENGTH; i++)
             {
                 int index = i+(j*LOC_LENGTH);
@@ -76,7 +77,8 @@ void testApp::update(){
         }
         else if(pos[j].y>ofGetHeight()+200)
         {
-//            pos[j].y = 0;
+                        age[j] = 1;
+            pos[j].y = 0;
             for (int i=0; i<LOC_LENGTH; i++)
             {
                 int index = i+(j*LOC_LENGTH);
@@ -85,7 +87,8 @@ void testApp::update(){
         }
         else if(pos[j].x>ofGetWidth()+200)
         {
-//            pos[j].x = 0;
+                        age[j] = 1;
+            pos[j].x = 0;
             for (int i=0; i<LOC_LENGTH; i++)
             {
                 int index = i+(j*LOC_LENGTH);
@@ -107,7 +110,7 @@ void testApp::update(){
                 int index2 = (i*2)+(j*LENGTH);
                 
 
-                radius = sinf(PI*float(i*1.f/LOC_LENGTH))*2;
+                radius = sinf(PI*float(i*1.f/LOC_LENGTH))*5;
                 {
                     ofVec3f perp0 = loc[index] - loc[index+1];
                     ofVec3f perp1 = perp0.getCrossed( ofVec3f( 0, 1, 0 ) ).getNormalized();

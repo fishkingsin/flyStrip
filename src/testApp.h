@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#define NUM_STRIP 1000
+#define NUM_STRIP 10000
 #define LOC_LENGTH 10
 #define LENGTH LOC_LENGTH*2
 
